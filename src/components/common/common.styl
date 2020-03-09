@@ -1,0 +1,73 @@
+vender(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vender('border-radius', arguments)
+
+box-shadow()
+  vender('box-shadow', arguments)
+
+opacity(n)
+  opacity n
+  if support-for-ie
+    filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+transition()
+  vender('transition', arguments)
+
+transform()
+  vender('transform', arguments)
+
+box-sizing()
+  vender('box-sizing', arguments)
+  
+animation() 
+  vender('animation', arguments)
+  
+body
+  padding 0
+  margin 0
+  font-family -apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif
+  // font-family -apple-system,".SFNSText-Regular","Helvetica Neue","Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif,Meiryo
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  background-color #fff
+  
+.table-wrap
+  overflow-x auto
+  th,td
+    white-space nowrap
+  .tb-table thead>tr>th,.tb-table tbody>tr>td
+    vertical-align middle
+
+.tb-card
+  box-shadow(none)
+
+.tb-breadcrumb
+  padding-left 10px
+  padding-right 10px
+  border-bottom 1px solid #f2f2f2
+
+.container
+  width 100%
+  margin-left 0
+  height 100%
+  position fixed
+  top 0
+  overflow auto
+  -webkit-app-region drag
+.fullContainer
+  width 100%
+  margin-left 0
+
+@media screen and (max-width: 768px)
+  .container
+    width 100%
+    margin-left 0
+  
+@media screen and (min-width: 1200px)
+  .fullContainer
+    width 100%
+    margin 0 auto

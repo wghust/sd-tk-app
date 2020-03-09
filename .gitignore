@@ -1,0 +1,4 @@
+node_modules/
+dist/
+squirtle-darwin-x64
+squirtle.dmg

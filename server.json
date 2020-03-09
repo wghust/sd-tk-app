@@ -1,0 +1,12 @@
+{
+  "host": "",
+  "port": 22,
+  "username": "root",
+  "password": "",
+  "pathMap": [
+    {
+      "localPath": "./dist",
+      "remotePath": ""
+    }
+  ]
+}
